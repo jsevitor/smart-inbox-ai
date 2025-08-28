@@ -10,7 +10,7 @@ const redHatDisplay = Red_Hat_Display({
 export const metadata: Metadata = {
   title: "SMART INBOX AI",
   description:
-    "Analise e classifição automatizada de emails com Inteligência Artificial.",
+    "Analise e classifição automatizada de emails com Inteligência Artificial.chore: limpa projeto Next.js e define variáveis de cores e fontes",
 };
 
 export default function RootLayout({
