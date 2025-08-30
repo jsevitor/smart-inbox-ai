@@ -38,14 +38,14 @@ Usuário → Interface Web (upload/entrada de texto)
 
     /app
       /backend      # Código backend (API, NLP, lógica de resposta)
-      /frontend     # Interface web (HTML/CSS/JS)
+      /frontend     # Interface web (Next.js)
     /docs
     README.md
     requirements.txt
 
 ## 🚀 Próximos Passos
 
-- [ ] Implementar interface inicial em HTML para upload de arquivos/texto.
+- [x] Implementar interface inicial em HTML para upload de arquivos/texto.
 - [ ] Criar backend em Python com endpoint de teste.
 - [ ] Integrar modelo de classificação zero-shot.
 - [ ] Definir e aplicar templates de resposta.
