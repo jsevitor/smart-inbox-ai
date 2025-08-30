@@ -4,8 +4,8 @@
 
 :root {
   --background: #f4f2ee;
-  --primary: #2563eb;
-  --primary-hover: #3b82f6;
+  --primary: #063456;
+  --primary-hover: #0e67aa;
   --text: #111827;
   --text-secondary: #6b7280;
   --success: #10b981;
@@ -29,4 +29,9 @@
 body {
   background: var(--background);
   color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
