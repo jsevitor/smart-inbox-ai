@@ -30,6 +30,7 @@ class AutomatedResponse:
             - Gere uma resposta curta e assertiva.
             - A resposta deve ser **direcionada ao remetente do email**.
             - Se o email for marketing ou spam, peça educadamente para não enviar mais mensagens.
+            - Estruture em formato de email profissional: saudação, corpo da mensagem e fechamento adequado.
             - Retorne SOMENTE um JSON com a chave "resposta".
             - Não inclua texto extra fora do JSON.
 
@@ -41,15 +42,26 @@ class AutomatedResponse:
 
         elif category_lower == "produtivo":
             prompt = f"""
-            Texto do email: "{clean_text}"
+            Você recebeu o seguinte email:
+
+            "{clean_text}"
+
             Categoria: "Produtivo"
 
-            Instruções:
-            - Gere uma resposta completa em formato de email profissional.
-            - Mantenha um tom cordial, claro e organizado.
-            - Inclua saudações, corpo da mensagem e fechamento adequado.
+            Instruções para gerar a resposta:
+            - Escreva a resposta como se fosse enviada pelo destinatário original (a pessoa que recebeu esse email).
+            - Direcione a mensagem ao remetente do email recebido.
+            - Não repita nem parafraseie o conteúdo do email recebido.
+            - Seja cordial, claro e objetivo.
+            - Estruture em formato de email profissional: saudação, corpo da mensagem e fechamento adequado.
             - Retorne SOMENTE um JSON com a chave "resposta".
+
+            Exemplo de saída:
+            {{
+            "resposta": "Olá, agradeço o retorno positivo sobre minha inscrição. Estou animado com a possibilidade de participar do processo seletivo e fico à disposição para fornecer informações adicionais, caso necessário. Atenciosamente, [Nome da Pessoa]."
+            }}
             """
+
         else:
             # fallback caso a categoria seja desconhecida
             prompt = f"""
