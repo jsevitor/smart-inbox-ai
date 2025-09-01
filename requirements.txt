@@ -4,3 +4,8 @@ transformers
 torch
 spacy
 pdfminer.six
+python-multipart
+python-dotenv
+google-genai
+pydantic
+typing-extensions
