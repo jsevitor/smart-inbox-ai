@@ -10,7 +10,7 @@ export default function EmailTextarea({ value, onChange }: EmailTextareaProps) {
       placeholder="Insira o email aqui..."
       value={value}
       onChange={onChange}
-      className="w-full h-52 border border-primary rounded-2xl p-2 resize-none"
+      className="w-full h-52 border border-primary rounded-2xl p-4 resize-none"
     />
   );
 }

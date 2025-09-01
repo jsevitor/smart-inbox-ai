@@ -1,14 +1,15 @@
 type PrimaryButtonProps = {
   children: React.ReactNode;
+  onClick?: () => void | Promise<void>;
 };
 
 export default function PrimaryButton({
   children,
-  ...props
+  onClick,
 }: PrimaryButtonProps) {
   return (
     <button
-      {...props}
+      onClick={onClick}
       className="flex justify-center gap-2 w-1/2 rounded-full bg-primary hover:bg-primary-hover text-white p-2"
     >
       {children}

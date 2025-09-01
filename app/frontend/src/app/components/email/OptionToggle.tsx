@@ -19,7 +19,7 @@ export default function OptionToggle({
         <button
           key={opt.value}
           onClick={() => onChange(opt.value)}
-          className={`flex justify-center gap-2 w-1/2 p-2 
+          className={`flex justify-center items-center gap-2 flex-1 lg:w-1/2 p-2 text-sm lg:text-base
             ${
               selected === opt.value
                 ? "bg-primary text-white"
