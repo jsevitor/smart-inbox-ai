@@ -54,6 +54,7 @@ class AutomatedResponse:
             - Não repita nem parafraseie o conteúdo do email recebido.
             - Seja cordial, claro e objetivo.
             - Estruture em formato de email profissional: saudação, corpo da mensagem e fechamento adequado.
+            - Ao final da resposta, inclua a seguinte frase: "Atenciosamente, [Nome da Pessoa]". Não coloque o nome de usuario na resposta.
             - Retorne SOMENTE um JSON com a chave "resposta".
 
             Exemplo de saída:
