@@ -1,7 +1,7 @@
 {
   "entryPoints": ["src/app"],
   "entryPointStrategy": "expand",
-  "out": "../docs/frontend",
+  "out": "../../docs/frontend",
   "tsconfig": "tsconfig.json",
   "excludePrivate": true,
   "excludeInternal": true,
