@@ -8,8 +8,20 @@ import SectionHeader from "../common/SectionHeader";
 import Heading from "../common/Heading";
 import ResultadoTag from "../response/ResultadoTag";
 import ResponseSuggestion from "../response/ResponseSuggestion";
-import { ClipLoader, PropagateLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 
+/**
+ * Tipagem das propriedades do componente Main.
+ *
+ * @typedef {object} ClassificationResult
+ * @property {object} resultado Dados da classificação do texto.
+ * @property {string} resultado.texto_original Texto original enviado para classificação.
+ * @property {string} resultado.texto_preprocessado Texto preprocessado utilizado pela API.
+ * @property {string} resultado.categoria Categoria atribuída ao texto (ex: produtivo, improdutivo).
+ * @property {number} resultado.confianca Nível de confiança da classificação, valor numérico.
+ * @property {object} resposta_sugerida Resposta sugerida para o email classificado.
+ * @property {string} resposta_sugerida.resposta Texto da resposta sugerida.
+ */
 interface ClassificationResult {
   resultado: {
     texto_original: string;
@@ -22,6 +34,27 @@ interface ClassificationResult {
   };
 }
 
+/**
+ * Main Component
+ *
+ * Componente principal que permite ao usuário classificar emails
+ * via upload de arquivo ou inserção direta de texto.
+ * Mostra o resultado da classificação com sugestão de resposta.
+ *
+ * ▸ **Responsabilidade**
+ * - Gerenciar estado do input de texto ou arquivo selecionado
+ * - Controlar o modo de entrada (arquivo ou texto)
+ * - Chamar a API para classificação conforme a opção selecionada
+ * - Exibir indicador de carregamento durante processamento
+ * - Apresentar resultados da classificação e sugestões ao usuário
+ *
+ * @returns {JSX.Element} Componente visual principal da página de classificação
+ *
+ * @example
+ * ```tsx
+ * <Main />
+ * ```
+ */
 export default function Main() {
   const [selectedOption, setSelectedOption] = useState("file");
   const [textInput, setTextInput] = useState("");

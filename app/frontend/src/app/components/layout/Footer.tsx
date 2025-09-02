@@ -1,3 +1,20 @@
+/**
+ * Footer Component
+ *
+ * Componente responsável por renderizar o rodapé da aplicação.
+ * Exibe informações de direitos autorais e crédito ao desenvolvedor.
+ *
+ * ▸ **Responsabilidade**
+ * - Mostrar copyright e direitos reservados
+ * - Incluir link para o perfil do desenvolvedor
+ *
+ * @returns {JSX.Element} Componente visual do rodapé
+ *
+ * @example
+ * ```tsx
+ * <Footer />
+ * ```
+ */
 export default function Footer() {
   return (
     <footer>
@@ -10,6 +27,7 @@ export default function Footer() {
             href="https://github.com/jsevitor"
             target="_blank"
             className="underline text-primary hover:text-primary-hover"
+            rel="noopener noreferrer"
           >
             Vitor Oliveira
           </a>
