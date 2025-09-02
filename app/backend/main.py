@@ -11,7 +11,7 @@ import tempfile
 origins = [
     "http://localhost:3000",  
     "http://127.0.0.1:3000",
-    # Adicione domínios de produção conforme necessário
+    "https://smart-inbox-ai-xi.vercel.app/",
 ]
 
 class TextInput(BaseModel):
