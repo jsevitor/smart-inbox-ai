@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
-from modules.classifier import EmailClassifier
-from modules.reader import Reader
-from modules.response import AutomatedResponse
+from app.backend.modules.classifier import EmailClassifier
+from app.backend.modules.reader import Reader
+from app.backend.modules.response import AutomatedResponse
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 

@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from modules.preprocess import SpacyPreprocessor
+from app.backend.modules.preprocess import SpacyPreprocessor
 
 # Carrega variáveis de ambiente do arquivo .env
 load_dotenv()
