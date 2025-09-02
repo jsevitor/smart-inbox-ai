@@ -1,55 +1,87 @@
-## Contexto do Projeto
+# Smart Inbox AI
 
-Empresas do setor financeiro lidam diariamente com um alto volume de emails, muitos dos quais exigem atenção imediata (ex.: solicitações de status, envio de documentos), enquanto outros são improdutivos (ex.: mensagens de felicitação). Atualmente, esse trabalho é feito manualmente, consumindo tempo e reduzindo a produtividade da equipe.
+Uma aplicação web que utiliza **Inteligência Artificial** para
+classificar emails e sugerir respostas automáticas, ajudando equipes a
+focarem no que realmente importa.
+
+## Contexto
+
+Empresas do setor financeiro recebem diariamente um grande volume de
+emails, desde solicitações urgentes até mensagens sem valor produtivo.
+Esse processo manual consome tempo e reduz a eficiência da equipe.
+
+O **Smart Inbox AI** resolve esse problema ao automatizar a análise de
+emails com técnicas de NLP, classificando-os como **Produtivos** ou
+**Improdutivos** e sugerindo respostas adequadas.
 
 ## Objetivo
 
-Criar uma aplicação web simples que utilize técnicas de Inteligência Artificial para:
+- **Classificar** emails em duas categorias: Produtivo ou
+  Improdutivo.
+- **Gerar respostas sugeridas** automaticamente, de acordo com a
+  categoria.
 
-1. **Classificar** emails em duas categorias: **Produtivo** ou **Improdutivo**.
-2. **Sugerir respostas automáticas** de acordo com a categoria identificada.
+## Preview
 
-## Escopo do Projeto
+Acesse o projeto em: https://smart-inbox-ai-xi.vercel.app/
 
-### MVP (entregável principal)
+## Screenshot
 
-- Upload de arquivos `.txt` e `.pdf` ou inserção de texto manual.
-- Classificação dos emails em **Produtivo** ou **Improdutivo**.
-- Exibição de uma **resposta sugerida** para o email classificado.
+![alt text](image.png)
 
-### Funcionalidades Futuras (se houver tempo)
+## Escopo
 
-- Subcategorias de intenção (status de solicitação, envio de anexo, felicitações).
-- Medidor de confiança do modelo de IA.
-- Opção de copiar resposta para a área de transferência.
-- Histórico dos emails processados.
+### MVP
 
-## Arquitetura da Solução
+- Upload de arquivos `.txt` e `.pdf` ou entrada de texto manual.
+- Classificação de emails em **Produtivo** ou **Improdutivo**.
+- Sugestão de resposta automática.
 
-Fluxo planejado:
+## Arquitetura
 
-Usuário → Interface Web (upload/entrada de texto)
-→ Backend Python (API REST)
-→ NLP (pré-processamento + classificação zero-shot)
-→ Motor de Resposta (templates baseados em categoria/intenção)
-← Resultado: Categoria + Resposta sugerida
+Fluxo da aplicação:
 
-## Estrutura Inicial do Repositório
+    Usuário → Interface Web (Next.js)
+            → Backend Python (FastAPI)
+            → NLP (classificação zero-shot + templates de resposta)
+            ← Resultado: Categoria + Resposta sugerida (Gemini API)
+
+## Deploy
+
+- **Frontend:** Vercel (escala automática, otimizado para apps React/Next.js)
+
+- **Backend:** Render (infra simples para containers e APIs Python)
+
+## Estrutura do Repositório
 
     /app
-      /backend      # Código backend (API, NLP, lógica de resposta)
-      /frontend     # Interface web (Next.js)
-    /docs
+      /backend   # API em Python (FastAPI + NLP + Gemini API)
+      /frontend  # Interface web (Next.js)
+     /docs       # Documentação gerada (Sphinx + Typedoc)
     README.md
     requirements.txt
 
-## 🚀 Próximos Passos
+## Tecnologias Utilizadas
 
-- [x] Implementar interface inicial em HTML para upload de arquivos/texto.
-- [ ] Criar backend em Python com endpoint de teste.
-- [ ] Integrar modelo de classificação zero-shot.
-- [ ] Definir e aplicar templates de resposta.
-- [ ] Realizar deploy em nuvem (Render ou Hugging Face Spaces).
-- [ ] Gravar vídeo de demonstração.
+- **Frontend:** Next.js, React, TypeScript
+- **Backend:** Python, FastAPI
+- **IA/NLP:** Hugging Face Transformers (zero-shot classification), Google Gemini API
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto é apenas para fins de avaliação técnica.
+
+## Contato
+
+Caso queira entrar em contato, me encontre em:
+
+- LinkedIn: [linkedin.com/in/josevitoroliveira](https://linkedin.com/in/josevitoroliveira)
+- E-mail: [vitorjseo@gmail.com](mailto:vitorjseo@gmail.com)
 
 ---
+
+Desenvolvido por **Vitor Oliveira**.
