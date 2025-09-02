@@ -27,7 +27,7 @@ Acesse o projeto em: https://smart-inbox-ai-xi.vercel.app/
 
 ## Screenshot
 
-![alt text](image.png)
+<img width="1350" height="768" alt="smart-inbox-ai" src="https://github.com/user-attachments/assets/20ca2919-0d97-46d9-a3e1-5b8ad72cea54" />
 
 ## Escopo
 
