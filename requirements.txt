@@ -8,7 +8,10 @@ python-dotenv
 google-genai
 pydantic
 typing-extensions
-spacy
-spacy
-https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.7.0/pt_core_news_sm-3.7.0.tar.gz#egg=pt_core_news_sm
 
+# spaCy + dependências com wheels binários
+spacy[lookups]==3.7.4
+blis==0.7.11
+
+# modelo em português
+https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.7.0/pt_core_news_sm-3.7.0.tar.gz#egg=pt_core_news_sm
